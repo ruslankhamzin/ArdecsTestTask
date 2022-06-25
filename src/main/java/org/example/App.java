@@ -35,7 +35,6 @@ public class App {
                 }
                 else {
                     System.out.println("Key: "+ key + " Value: "+ myCache.get(key).toString());
-                    System.out.println(myCache.list.toString() + " " + myCache.map.toString());
                 }
             }
         } catch (IOException e) {
