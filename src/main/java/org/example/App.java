@@ -16,25 +16,21 @@ public class App {
             System.out.println("Choose a strategy(1-LRU,2-MRU): ");
             int strategy = Integer.parseInt(reader.readLine());
             System.out.println("Choose a repository (1-Disk,2-Memory): ");
-            int repo= Integer.parseInt(reader.readLine());
-            RealizationCache myCache = new RealizationCache(size,strategy,repo);
-            while (true){
+            int repo = Integer.parseInt(reader.readLine());
+            RealizationCache myCache = new RealizationCache(size, strategy, repo);
+            while (true) {
                 System.out.println("Write a key(write delete to clear cache):");
                 String key = reader.readLine();
-
-                if(key.equals("delete")){
+                if (key.equals("delete")) {
                     myCache.clear();
                     continue;
                 }
-
-                if(myCache.get(key)==null){
+                if (myCache.get(key) == null) {
                     System.out.println("Write a value: ");
-                    String value= reader.readLine();
-                    myCache.put(key,value);
-
-                }
-                else {
-                    System.out.println("Key: "+ key + " Value: "+ myCache.get(key).toString());
+                    String value = reader.readLine();
+                    myCache.put(key, value);
+                } else {
+                    System.out.println("Key: " + key + " Value: " + myCache.get(key).toString());
                 }
             }
         } catch (IOException e) {
