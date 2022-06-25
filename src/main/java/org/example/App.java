@@ -13,7 +13,7 @@ public class App {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Write a size of cache: ");
             int size = Integer.parseInt(reader.readLine());
-            System.out.println("Choose a strategy(1-LRU,2-MRU): ");
+            System.out.println("Choose a strategy ( 1 - LRU, 2 - MRU, 3 - LFU): ");
             int strategy = Integer.parseInt(reader.readLine());
             System.out.println("Choose a repository (1-Disk,2-Memory): ");
             int repo = Integer.parseInt(reader.readLine());
@@ -29,6 +29,7 @@ public class App {
                     System.out.println("Write a value: ");
                     String value = reader.readLine();
                     myCache.put(key, value);
+                    //System.out.println(myCache.map1.toString() + " " + myCache.map.toString());
                 } else {
                     System.out.println("Key: " + key + " Value: " + myCache.get(key).toString());
                 }

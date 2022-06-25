@@ -1,11 +1,11 @@
 package org.example;
 
 public interface Cache {
-    void put(Object key, Object val);
+    void put(String key, String val);
 
-    Object get(Object key);
+    Object get(String key);
 
-    void remove(Object key);
+    void remove(String key);
 
     void clear();
 
